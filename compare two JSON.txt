@@ -1,0 +1,12 @@
+function compareJSON(obj1, obj2) {
+    const sortedobj1 = JSON.stringify(obj1, Object.keys(obj1).sort());
+    const sortedobj2 = JSON.stringify(obj2, Object.keys(obj2).sort());
+    return sortedobj1 === sortedobj2;
+}
+
+const obj1 = { name: "Dinesh", age: 25 };
+const obj2 = { age: 25, name: "Dinesh" };
+
+console.log(compareJSON(obj1, obj2)); 
+
+// Output: true
